@@ -13,8 +13,11 @@ body {
 .container {
   width: 960px;
   margin: 0 auto;
+  position: relative;
+  top: 1rem;
 }
 
+/*The blue header and menu section*/
 header {
   display: flex;
   justify-content: space-between;
@@ -50,6 +53,11 @@ header {
   margin-right: 2rem;
 }
 
+.mobile_menu {
+  display: none;
+}
+
+/*The big main image*/
 .main_banner {
   background-image:
   url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png');
@@ -57,6 +65,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 31rem;
+  position: relative;
+  top: -1rem;
 }
 
 .motto_box {
@@ -71,6 +81,7 @@ header {
   margin-right: -2rem;
 }
 
+/*Icon section*/
 .icon_section {
   display: flex;
   flex-direction: row;
@@ -108,6 +119,7 @@ header {
   text-align: center;
 }
 
+/*Company info and address section*/
 .company_info {
   display: flex;
   flex-wrap: wrap;
@@ -149,6 +161,90 @@ footer {
   margin: 4rem 1rem 4rem 4rem;
 }
 
-.foot_logo span {
+/*Features specific to tablet view*/
+@media only screen and (max-width: 1024px) {
+  .container {
+    top: 0;
+    width: 100%;
+  }
 
+  .main_banner {
+    height: 22rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .motto_box {
+    margin-top: 5rem;
+    float: right;
+    margin-right: 2rem;
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+  }
+}
+
+/*Features specific for mobile phone view*/
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .head_nav ul {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+    margin: 1rem 2rem;
+  }
+
+  .main_banner {
+    height: 17rem;
+    background-position: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .motto_box {
+    margin-top: 9rem;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon_section {
+    flex-direction: column;
+    margin-top: 3.77rem;
+  }
+
+  .fittings {
+    margin-top: 1.54rem;
+    margin-bottom: 1.54rem;
+  }
+
+  .icon_text {
+    font-size: 0.77rem;
+  }
+
+  .icon_box {
+    height: 6.5rem;
+  }
+
+  .company_info {
+    flex-direction: column;
+  }
+
+  .info_box {
+    width: 100%;
+    font-size: 0.77rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .info_box h4 {
+    width: 100%;
+    text-align: center;
+  }
 }
