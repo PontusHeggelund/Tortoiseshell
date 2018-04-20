@@ -3,10 +3,11 @@ body {
   font-size: 18px;
   line-height: 1.4;
   box-sizing: border-box;
+  background-color: white;
 }
 
 * {
-  font-family: Helvetica;
+  font-family: "Helvetica", sans-serif;
 }
 
 /* Site Container */
@@ -165,7 +166,7 @@ footer {
 @media only screen and (max-width: 1024px) {
   .container {
     top: 0;
-    width: 100%;
+    max-width: 100%;
   }
 
   .main_banner {
@@ -185,7 +186,7 @@ footer {
 }
 
 /*Features specific for mobile phone view*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 560px) {
   .container {
     width: 100%;
   }
@@ -202,13 +203,12 @@ footer {
   .main_banner {
     height: 17rem;
     background-position: 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .motto_box {
-    margin-top: 9rem;
+    margin: 9rem auto 0 auto;
     font-size: 1rem;
+    padding: 1rem 0;
     display: block;
     text-align: center;
     width: 100%;
@@ -239,12 +239,30 @@ footer {
   .info_box {
     width: 100%;
     font-size: 0.77rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+  }
+
+  .info_box.appointment_box {
+    margin: 4rem 0 0 0;
   }
 
   .info_box h4 {
+    max-width: 100%;
     width: 100%;
     text-align: center;
   }
+
+  .info_box p {
+    padding: 0 0.5rem;
+  }
+
+/*Footer section*/
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.foot_logo span {
+  display: none;
+}
+
 }
